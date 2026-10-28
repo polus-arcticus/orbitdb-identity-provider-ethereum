@@ -33,8 +33,8 @@ describe('Ethereum EIP-712 Identity Provider', function () {
     assert.strictEqual(namedExport, OrbitDBIdentityProviderEthereumEIP712)
   })
 
-  it('uses the zero address verifyingContract and chainId 1', () => {
-    assert.strictEqual(domain.chainId, 1)
+  it('uses the zero address verifyingContract and no chainId', () => {
+    assert.strictEqual(domain.chainId, undefined)
     assert.strictEqual(domain.verifyingContract, '0x0000000000000000000000000000000000000000')
   })
 

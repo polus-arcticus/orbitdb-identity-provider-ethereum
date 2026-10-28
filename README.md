@@ -77,7 +77,7 @@ const wallet = {
 }
 ```
 
-The domain is fixed so an identity can be verified without extra context: `{ name: 'OrbitDB Identity', version: '1', chainId: 1, verifyingContract: 0x000…000 }`. The `chainId` and `verifyingContract` are placeholders. Identities are not tied to a chain or contract.
+The domain is fixed so an identity can be verified without extra context: `{ name: 'OrbitDB Identity', version: '1', verifyingContract: 0x000…000 }`. `chainId` is omitted because wallets reject typed data whose chainId doesn't match the active chain, and the `verifyingContract` is a placeholder. Identities are not tied to a chain or contract.
 
 ## Contributing
 

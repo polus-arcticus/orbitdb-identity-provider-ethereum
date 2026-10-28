@@ -10,12 +10,12 @@ const PUBLIC_KEY_LENGTH = 66
 /**
  * The EIP-712 domain used for all OrbitDB identity signatures. The values are
  * fixed so that identities can be verified from the identity alone: an
- * OrbitDB identity is not bound to a chain or a contract.
+ * OrbitDB identity is not bound to a chain or a contract. chainId is omitted
+ * because wallets reject typed data whose chainId differs from the active chain.
  */
 export const domain = Object.freeze({
   name: 'OrbitDB Identity',
   version: '1',
-  chainId: 1,
   verifyingContract: ZERO_ADDRESS
 })
 
